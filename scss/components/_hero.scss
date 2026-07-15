@@ -2,7 +2,7 @@ $design-width: 1512px;
 
 .hero {
   position: relative;
-  min-height: 1550px;
+  min-height: 2343px;
   overflow: hidden;
   background:
     radial-gradient(
@@ -120,7 +120,7 @@ $design-width: 1512px;
 
 @media (width <= 1100px) {
   .hero {
-    min-height: 1320px;
+    min-height: 1900px;
   }
 
   .hero__brand {

@@ -1,0 +1,127 @@
+.balance-card {
+  --floating-card-angle: 118.397deg;
+
+  top: 1632px;
+  left: clamp(32px, calc(50vw - 552px), 204px);
+  width: 298px;
+  height: 187px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.balance-card__surface {
+  inset: 0;
+}
+
+.balance-card__content {
+  position: absolute;
+  top: 10.15px;
+  left: 50%;
+  width: 274.21px;
+  transform: translateX(-50%);
+}
+
+.balance-card__tabs {
+  display: flex;
+  align-items: flex-start;
+  height: 24.15px;
+}
+
+.balance-card__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24.15px;
+  padding-inline: 9.12px;
+  border-radius: 12.15px;
+  color: #00427a;
+  font-size: 12.15px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.balance-card__tab.is-active {
+  border-radius: 3.04px;
+  background: #ffc600;
+}
+
+.balance-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17.47px;
+  width: 274.21px;
+  margin-top: 13.67px;
+  padding-block: 9.12px;
+}
+
+.balance-card__summary {
+  display: flex;
+  align-items: center;
+  gap: 12.15px;
+  width: 100%;
+  height: 75.8px;
+}
+
+.balance-card__amount {
+  display: flex;
+  flex: 0 0 130.65px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6.08px;
+  width: 130.65px;
+  padding-top: 18.23px;
+}
+
+.balance-card__amount strong {
+  color: #b0b0b0;
+  font-size: 24.31px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.balance-card__amount span {
+  padding: 6.08px;
+  border-radius: 3.04px;
+  background: #b0b0b0;
+  color: #fafafa;
+  font-size: 12.15px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.balance-card__meter {
+  flex: 0 0 131.91px;
+  width: 131.91px;
+  height: 75.8px;
+}
+
+.balance-card__progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 12.15px;
+  color: #00427a;
+  font-size: 10.63px;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.balance-card__progress strong {
+  font-weight: 700;
+}
+
+.balance-card__progress img {
+  width: 12.15px;
+  height: 12.15px;
+}
+
+@media (width <= 700px) {
+  .balance-card {
+    display: none;
+  }
+}
