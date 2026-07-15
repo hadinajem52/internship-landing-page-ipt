@@ -62,14 +62,20 @@ $design-width: 1512px;
 }
 
 .hero__visual {
+  --phone-pin-y: 0px;
+
   position: absolute;
   z-index: 1;
   top: 365px;
   left: 50vw;
   width: min(68.65vw, 1038px);
-  transform: translateX(-27.17%);
+  transform: translateX(-27.17%) translateY(var(--phone-pin-y));
   pointer-events: none;
   user-select: none;
+}
+
+.hero__visual.is-scroll-pinned {
+  will-change: transform;
 }
 
 .hero__visual img {
