@@ -80,12 +80,11 @@ $design-width: 1512px;
 .hero__phone-carousel {
   position: absolute;
   z-index: 2;
-  top: 3.95%;
-  left: 10%;
-  width: 26.8%;
-  height: 52.75%;
+  top: 2.75%;
+  left: 8.6%;
+  width: 29.55%;
+  height: 55.6%;
   overflow: hidden;
-  border-radius: 5.4% / 2.5%;
 }
 
 .hero__phone-carousel-track {
@@ -106,11 +105,10 @@ $design-width: 1512px;
 
 .hero__phone-carousel-slide img {
   position: absolute;
-  top: -2.05%;
-  left: -4.9%;
-  width: 109.8%;
+  inset: 0;
+  width: 100%;
   max-width: none;
-  height: auto;
+  height: 100%;
 }
 
 .hero__visual > img {
