@@ -1,0 +1,18 @@
+.floating-card {
+  position: absolute;
+  z-index: 3;
+}
+
+.floating-card__surface {
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid rgb(191 191 191 / 47%);
+  border-radius: 12px;
+  background: linear-gradient(
+    var(--floating-card-angle, 131.45deg),
+    rgb(255 255 255 / 24%),
+    rgb(255 255 255 / 6%)
+  );
+  box-shadow: 0 0 50px -25px rgb(0 0 0 / 50%);
+  backdrop-filter: blur(50px);
+}

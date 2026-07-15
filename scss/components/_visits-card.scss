@@ -1,0 +1,34 @@
+.visits-card {
+  --floating-card-angle: 124.33deg;
+
+  top: 1266px;
+  left: calc(50vw + 306px);
+  width: 302px;
+  height: 150px;
+}
+
+.visits-card__surface {
+  inset: 0;
+}
+
+.visits-card__artwork {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+  width: 276px;
+  height: 122px;
+  mix-blend-mode: multiply;
+}
+
+@media (width <= 700px) {
+  .visits-card {
+    display: none;
+  }
+}
+
+@media (701px <= width <= 1300px) {
+  .visits-card {
+    right: 32px;
+    left: auto;
+  }
+}
