@@ -1,0 +1,141 @@
+$design-width: 1512px;
+
+.hero {
+  position: relative;
+  min-height: 1550px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse 1134px 326px at 50vw 0,
+      rgb(185 200 226) 0%,
+      rgb(255 255 255) 100%
+    )
+    top center / 100% 1304px no-repeat,
+    #fff;
+}
+
+.hero__header {
+  position: relative;
+  z-index: 2;
+  width: min(100%, $design-width);
+  height: 114px;
+  margin-inline: auto;
+}
+
+.hero__brand {
+  position: absolute;
+  top: 31px;
+  left: 99px;
+  width: 206.46px;
+  height: 83.43px;
+}
+
+.hero__brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero__title {
+  position: absolute;
+  z-index: 2;
+  top: 197px;
+  left: 50vw;
+  width: 100vw;
+  transform: translateX(-50%);
+  color: #00427a;
+  font-family: "Sommet Rounded", "Arial Rounded MT Bold", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 70px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title strong {
+  color: #ffc600;
+  font: inherit;
+}
+
+.hero__visual {
+  position: absolute;
+  z-index: 1;
+  top: 365px;
+  left: 50vw;
+  width: min(68.65vw, 1038px);
+  transform: translateX(-27.17%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__visual img {
+  width: 100%;
+  height: auto;
+}
+
+@media (width <= 1100px) {
+  .hero {
+    min-height: 1320px;
+  }
+
+  .hero__brand {
+    left: clamp(32px, 6.55vw, 99px);
+  }
+
+  .hero__title {
+    font-size: clamp(42px, 3.97vw, 60px);
+    line-height: 1.17;
+  }
+
+  .hero__visual {
+    width: max(760px, 68.65vw);
+  }
+}
+
+@media (width <= 700px) {
+  .hero {
+    min-height: 1210px;
+    background-size: auto 850px;
+  }
+
+  .hero__header {
+    height: 104px;
+  }
+
+  .hero__brand {
+    top: 24px;
+    left: 24px;
+    width: 142px;
+    height: auto;
+  }
+
+  .hero__title {
+    top: 145px;
+    padding-inline: 20px;
+    font-size: clamp(31px, 9.5vw, 42px);
+    line-height: 1.08;
+    letter-spacing: 0.4px;
+  }
+
+  .hero__title-line:first-child {
+    max-width: 11ch;
+    margin-inline: auto;
+  }
+
+  .hero__visual {
+    top: 325px;
+    width: 760px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
