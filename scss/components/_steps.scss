@@ -28,16 +28,17 @@
 }
 
 .steps__grid {
-  display: flex;
+  display: grid;
   width: 100%;
-  justify-content: space-between;
+  grid-template-columns: repeat(3, 400px);
   gap: 57px;
 }
 
 .steps__card {
-  display: flex;
+  display: grid;
   height: 415px;
   width: 400px;
+  grid-template-columns: var(--steps-number-column) minmax(0, 1fr);
   align-items: center;
   padding-inline: 20px;
   border: 1px solid rgb(255 255 255 / 40%);
@@ -45,25 +46,42 @@
   background: rgb(255 255 255 / 40%);
 }
 
+.steps__card--locate {
+  --steps-number-column: 102px;
+}
+
+.steps__card--locate .steps__number {
+  justify-self: center;
+}
+
+.steps__card--scan {
+  --steps-number-column: 116px;
+}
+
+.steps__card--scan .steps__number {
+  height: 242px;
+}
+
+.steps__card--pay {
+  --steps-number-column: 125px;
+}
+
 .steps__number {
-  flex-shrink: 0;
-  margin-right: -30px;
-  color: rgb(255 198 0 / 50%);
-  // Figma specifies Sommet Rounded Regular, but only the Heavy cut is available
-  // as an asset, which renders far bolder/wider than the design. Montserrat at
-  // its regular weight is the closest stand-in for the intended stroke weight.
-  font-family: "Montserrat", sans-serif;
-  font-size: 330px;
-  font-weight: 400;
-  line-height: 1;
-  white-space: nowrap;
+  z-index: 0;
+  width: auto;
+  height: 246px;
+  max-width: none;
+  justify-self: start;
 }
 
 .steps__content {
+  z-index: 1;
   display: flex;
-  flex: 1;
+  width: 100%;
+  min-width: 0;
   flex-direction: column;
   gap: 15px;
+  padding-top: 15px;
 }
 
 .steps__heading {
@@ -111,7 +129,18 @@
   margin-top: 24px;
 }
 
-@media (width <= 900px) {
+@media (width <= 1400px) {
+  .steps__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(28px, 3vw, 57px);
+  }
+
+  .steps__card {
+    width: 100%;
+  }
+}
+
+@media (width <= 1100px) {
   .steps {
     padding: 100px 0 140px;
   }
@@ -125,8 +154,8 @@
   }
 
   .steps__grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 40px;
   }
 
@@ -137,7 +166,7 @@
   }
 
   .steps__number {
-    font-size: 220px;
+    height: 190px;
   }
 }
 
@@ -151,15 +180,15 @@
   }
 
   .steps__card {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 28px 20px;
   }
 
   .steps__number {
-    margin-right: 0;
-    margin-bottom: -30px;
-    font-size: 140px;
+    height: 120px;
+    margin-bottom: -8px;
   }
 
   .steps__heading {
