@@ -1,0 +1,169 @@
+.steps {
+  padding: 160px 0;
+  background: #f2f9ff;
+}
+
+.steps__inner {
+  display: flex;
+  width: min(calc(100% - 48px), 1314px);
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.steps__title {
+  margin: 0;
+  color: #00427a;
+  font-family: "Sommet Rounded", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.steps__title-highlight {
+  color: #ffc600;
+}
+
+.steps__grid {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 57px;
+}
+
+.steps__card {
+  display: flex;
+  height: 415px;
+  width: 400px;
+  align-items: center;
+  padding-inline: 20px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 30px;
+  background: rgb(255 255 255 / 40%);
+}
+
+.steps__number {
+  flex-shrink: 0;
+  margin-right: -30px;
+  color: rgb(255 198 0 / 50%);
+  // Figma specifies Sommet Rounded Regular, but only the Heavy cut is available
+  // as an asset, which renders far bolder/wider than the design. Montserrat at
+  // its regular weight is the closest stand-in for the intended stroke weight.
+  font-family: "Montserrat", sans-serif;
+  font-size: 330px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.steps__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.steps__heading {
+  margin: 0;
+  color: #033a69;
+  font-family: "Galaxie Polaris", sans-serif;
+  font-size: 32px;
+  // Figma specifies Medium (500), but fonts/Galaxie Polaris Medium.otf renders
+  // italic and Book.otf (400) renders unexpectedly bold. 300 (Light.otf) is the
+  // only cut that renders upright and non-bold, so heading/body share it and
+  // rely on size/color for hierarchy instead of weight.
+  font-weight: 300;
+  line-height: 42px;
+}
+
+.steps__list {
+  margin: 0;
+  padding: 0;
+  color: #00427a;
+  font-family: "Galaxie Polaris", sans-serif;
+  font-size: 18px;
+  // Figma specifies Book (400), but fonts/Galaxie Polaris Book.otf renders bold.
+  // 300 (Light.otf) is the closest match to the intended body-copy weight.
+  font-weight: 300;
+  line-height: 24px;
+  list-style: none;
+}
+
+.steps__list li {
+  position: relative;
+  padding-left: 27px;
+}
+
+.steps__list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  background: currentcolor;
+}
+
+.steps__list li + li {
+  margin-top: 24px;
+}
+
+@media (width <= 900px) {
+  .steps {
+    padding: 100px 0 140px;
+  }
+
+  .steps__inner {
+    gap: 60px;
+  }
+
+  .steps__title {
+    font-size: clamp(31px, 5vw, 40px);
+  }
+
+  .steps__grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .steps__card {
+    height: auto;
+    width: min(100%, 460px);
+    padding: 40px 24px;
+  }
+
+  .steps__number {
+    font-size: 220px;
+  }
+}
+
+@media (width <= 560px) {
+  .steps {
+    padding: 76px 0 100px;
+  }
+
+  .steps__title {
+    font-size: clamp(27px, 8vw, 34px);
+  }
+
+  .steps__card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 20px;
+  }
+
+  .steps__number {
+    margin-right: 0;
+    margin-bottom: -30px;
+    font-size: 140px;
+  }
+
+  .steps__heading {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
