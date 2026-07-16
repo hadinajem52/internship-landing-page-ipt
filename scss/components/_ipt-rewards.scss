@@ -1,0 +1,183 @@
+.ipt-rewards {
+  padding-top: 96px;
+  background: #f2f9ff;
+}
+
+.ipt-rewards__inner {
+  width: min(calc(100% - 48px), 1311px);
+  margin-inline: auto;
+}
+
+.ipt-rewards__section-title {
+  margin: 0 0 52px;
+  color: #00427a;
+  font-family: "Sommet Rounded", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ipt-rewards__content {
+  display: flex;
+  min-height: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.ipt-rewards__intro {
+  display: flex;
+  height: 86px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Galaxie Polaris", sans-serif;
+}
+
+.ipt-rewards__title {
+  margin: 0;
+  color: #0f4087;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 42px;
+}
+
+.ipt-rewards__title strong {
+  color: #feaf00;
+  font: inherit;
+}
+
+.ipt-rewards__lead {
+  margin: 20px 0 0;
+  color: #00427a;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.ipt-rewards__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 305px 305.333px 305.667px 305px;
+  align-items: start;
+  gap: 30px;
+}
+
+.ipt-reward-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+}
+
+.ipt-reward-card__image {
+  display: block;
+  width: 100%;
+  height: 394px;
+  border: 0.871px solid #e0e0e0;
+  border-radius: 13.063px;
+  object-fit: cover;
+}
+
+.ipt-reward-card__title {
+  width: 100%;
+  margin: 0;
+  color: #00427a;
+  font-family: "Galaxie Polaris", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 27.361px;
+}
+
+.ipt-rewards + .omt-cashback {
+  padding-top: 150px;
+}
+
+@media (width <= 1380px) {
+  .ipt-rewards__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(20px, 2vw, 30px);
+  }
+
+  .ipt-reward-card__image {
+    height: auto;
+    aspect-ratio: 305 / 394;
+  }
+}
+
+@media (width <= 1100px) {
+  .ipt-rewards {
+    padding-top: 86px;
+  }
+
+  .ipt-rewards__section-title {
+    margin-bottom: 46px;
+  }
+
+  .ipt-rewards__content {
+    min-height: 0;
+  }
+
+  .ipt-rewards__grid {
+    width: min(100%, 670px);
+    margin-inline: auto;
+    grid-template-columns: repeat(2, minmax(0, 305px));
+    justify-content: center;
+    gap: 46px 30px;
+  }
+
+  .ipt-rewards + .omt-cashback {
+    padding-top: 120px;
+  }
+}
+
+@media (width <= 650px) {
+  .ipt-rewards {
+    padding-top: 72px;
+  }
+
+  .ipt-rewards__inner {
+    width: min(calc(100% - 40px), 528px);
+  }
+
+  .ipt-rewards__section-title {
+    margin-bottom: 40px;
+    font-size: 29px;
+    line-height: 38px;
+  }
+
+  .ipt-rewards__content {
+    gap: 38px;
+  }
+
+  .ipt-rewards__intro {
+    height: auto;
+  }
+
+  .ipt-rewards__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ipt-rewards__lead {
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .ipt-rewards__grid {
+    width: min(100%, 305px);
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .ipt-reward-card__title {
+    font-size: 22px;
+  }
+
+  .ipt-rewards + .omt-cashback {
+    padding-top: 96px;
+  }
+}
