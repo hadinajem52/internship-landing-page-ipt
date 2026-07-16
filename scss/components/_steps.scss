@@ -35,27 +35,27 @@
 }
 
 .steps__card {
-  display: grid;
+  position: relative;
+  display: block;
   height: 415px;
   width: 400px;
-  grid-template-columns: var(--steps-number-column) minmax(0, 1fr);
-  align-items: center;
-  padding-inline: 20px;
   border: 1px solid rgb(255 255 255 / 40%);
   border-radius: 30px;
   background: rgb(255 255 255 / 40%);
 }
 
 .steps__card--locate {
-  --steps-number-column: 102px;
-}
-
-.steps__card--locate .steps__number {
-  justify-self: center;
+  --steps-number-left: 8.5%;
+  --steps-content-top: 91.688px;
+  --steps-content-left: 28.25%;
+  --steps-content-width: 64.438%;
 }
 
 .steps__card--scan {
-  --steps-number-column: 116px;
+  --steps-number-left: 6.25%;
+  --steps-content-top: 94.188px;
+  --steps-content-left: 34.25%;
+  --steps-content-width: 54.47%;
 }
 
 .steps__card--scan .steps__number {
@@ -63,21 +63,30 @@
 }
 
 .steps__card--pay {
-  --steps-number-column: 125px;
+  --steps-number-left: 8.5%;
+  --steps-content-top: 43.688px;
+  --steps-content-left: 38.5%;
+  --steps-content-width: 54.47%;
 }
 
 .steps__number {
+  position: absolute;
   z-index: 0;
+  top: 50%;
+  left: var(--steps-number-left);
   width: auto;
   height: 246px;
   max-width: none;
-  justify-self: start;
+  transform: translateY(-50%);
 }
 
 .steps__content {
+  position: absolute;
   z-index: 1;
+  top: var(--steps-content-top);
+  left: var(--steps-content-left);
   display: flex;
-  width: 100%;
+  width: var(--steps-content-width);
   min-width: 0;
   flex-direction: column;
   gap: 15px;
@@ -85,15 +94,12 @@
 }
 
 .steps__heading {
+  height: 34px;
   margin: 0;
   color: #033a69;
-  font-family: "Galaxie Polaris", sans-serif;
+  font-family: "Galaxie Polaris";
   font-size: 32px;
-  // Figma specifies Medium (500), but fonts/Galaxie Polaris Medium.otf renders
-  // italic and Book.otf (400) renders unexpectedly bold. 300 (Light.otf) is the
-  // only cut that renders upright and non-bold, so heading/body share it and
-  // rely on size/color for hierarchy instead of weight.
-  font-weight: 300;
+  font-weight: 400;
   line-height: 42px;
 }
 
@@ -101,10 +107,8 @@
   margin: 0;
   padding: 0;
   color: #00427a;
-  font-family: "Galaxie Polaris", sans-serif;
+  font-family: "Galaxie Polaris";
   font-size: 18px;
-  // Figma specifies Book (400), but fonts/Galaxie Polaris Book.otf renders bold.
-  // 300 (Light.otf) is the closest match to the intended body-copy weight.
   font-weight: 300;
   line-height: 24px;
   list-style: none;
@@ -160,13 +164,7 @@
   }
 
   .steps__card {
-    height: auto;
-    width: min(100%, 460px);
-    padding: 40px 24px;
-  }
-
-  .steps__number {
-    height: 190px;
+    width: min(100%, 400px);
   }
 }
 
@@ -181,14 +179,22 @@
 
   .steps__card {
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: flex-start;
     padding: 28px 20px;
   }
 
   .steps__number {
+    position: static;
     height: 120px;
     margin-bottom: -8px;
+    transform: none;
+  }
+
+  .steps__content {
+    position: static;
+    width: 100%;
   }
 
   .steps__heading {
