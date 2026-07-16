@@ -1,0 +1,196 @@
+.track-recharge {
+  min-height: max(900px, 120vh);
+  background: #f2f9ff;
+}
+
+.track-recharge__scene {
+  position: sticky;
+  top: calc(50vh - min(16.93vw, 256px));
+  width: min(75.26vw, 1138px);
+  aspect-ratio: 1138 / 512;
+  margin-left: min(19.38vw, 293px);
+}
+
+.track-recharge__phones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 39.54%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.track-recharge__trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+}
+
+.track-recharge__side-phone,
+.track-recharge__middle-phone {
+  position: absolute;
+}
+
+.track-recharge__side-phone {
+  z-index: 1;
+  top: 10%;
+  width: 44.44%;
+  height: auto;
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.track-recharge:not(.is-expanded) .track-recharge__side-phone {
+  will-change: transform;
+}
+
+.track-recharge__side-phone--left {
+  left: 26.67%;
+}
+
+.track-recharge__side-phone--right {
+  left: 33.33%;
+}
+
+.track-recharge.is-expanded .track-recharge__side-phone--left {
+  transform: translate3d(-60%, 0, 0);
+}
+
+.track-recharge.is-expanded .track-recharge__side-phone--right {
+  transform: translate3d(50%, 0, 0);
+}
+
+.track-recharge__middle-phone {
+  z-index: 2;
+  top: 0;
+  left: 22.22%;
+  width: 55.56%;
+  aspect-ratio: 250 / 512;
+}
+
+.track-recharge__middle-slide {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: contain;
+  transition: opacity 800ms ease-in-out;
+}
+
+.track-recharge__middle-slide.is-active {
+  z-index: 1;
+  opacity: 1;
+}
+
+.track-recharge__copy {
+  position: absolute;
+  top: 18.14%;
+  left: 54.75%;
+  width: 39.37%;
+}
+
+.track-recharge__title {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  color: #003e86;
+  font-family: "Sommet Rounded", sans-serif;
+  font-size: clamp(30px, 2.65vw, 40px);
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.track-recharge__title strong {
+  color: #ffc600;
+  font: inherit;
+}
+
+.track-recharge__description {
+  margin-top: 40px;
+  color: #00427a;
+  font-family: "Galaxie Polaris", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.track-recharge__description p {
+  margin: 0;
+}
+
+@media (width <= 1100px) {
+  .track-recharge {
+    min-height: 0;
+    padding: 110px 32px 140px;
+  }
+
+  .track-recharge__scene {
+    position: relative;
+    top: auto;
+    display: flex;
+    width: 100%;
+    max-width: 760px;
+    margin-inline: auto;
+    aspect-ratio: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .track-recharge__phones {
+    position: relative;
+    width: min(100%, 450px);
+    aspect-ratio: 450 / 512;
+  }
+
+  .track-recharge__copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, 560px);
+    margin-top: 72px;
+    text-align: center;
+  }
+
+  .track-recharge__title {
+    align-items: center;
+    font-size: clamp(30px, 6vw, 40px);
+  }
+}
+
+@media (width <= 560px) {
+  .track-recharge {
+    padding: 80px 20px 100px;
+  }
+
+  .track-recharge__phones {
+    width: min(112%, 390px);
+  }
+
+  .track-recharge__copy {
+    margin-top: 52px;
+  }
+
+  .track-recharge__title {
+    font-size: clamp(27px, 8vw, 34px);
+  }
+
+  .track-recharge__description {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track-recharge__side-phone {
+    transition-duration: 240ms;
+  }
+
+  .track-recharge__middle-slide {
+    transition-duration: 300ms;
+  }
+}
