@@ -157,15 +157,15 @@
 @media (width <= 760px) {
   .site-footer {
     min-height: 0;
-    padding: 72px 20px 28px;
+    padding: 120px 20px 28px;
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
   .site-footer__content {
     grid-row: 1;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .site-footer__title {
@@ -174,11 +174,11 @@
   }
 
   .site-footer__download {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .site-footer__stores {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .site-footer__phone {
@@ -200,5 +200,71 @@
 @media (width <= 420px) {
   .site-footer__stores {
     flex-direction: column;
+  }
+}
+
+@media (width <= 560px) {
+  .site-footer {
+    position: relative;
+    display: block;
+    height: 552px;
+    min-height: 552px;
+    padding: 0;
+  }
+
+  .site-footer__content {
+    position: absolute;
+    top: 54px;
+    left: 20px;
+    width: calc(100% - 40px);
+    gap: 15px;
+  }
+
+  .site-footer__title {
+    width: min(100%, 374px);
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .site-footer__download {
+    gap: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .site-footer__stores {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .site-footer__stores img {
+    width: 150px;
+    height: auto;
+  }
+
+  .site-footer__phone {
+    position: absolute;
+    top: 235px;
+    left: 17px;
+    width: 245px;
+    height: 299px;
+  }
+
+  .site-footer__legal {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    left: 20px;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 11px;
+    white-space: nowrap;
   }
 }

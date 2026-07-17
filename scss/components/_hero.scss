@@ -186,9 +186,10 @@ main {
 
 @media (width <= 700px) {
   main {
-    --hero-base-height: 1210px;
-    --hero-fade-height: 120px;
-    --hero-hidden-runway: 120px;
+    --hero-base-height: 2341px;
+    --hero-fade-height: 214px;
+    --hero-hidden-runway: 0px;
+    --hero-sticky-overrun: 0px;
   }
 
   .hero {

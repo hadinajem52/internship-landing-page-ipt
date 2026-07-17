@@ -153,11 +153,11 @@
 
 @media (width <= 680px) {
   .collect-points {
-    padding-block: 96px;
+    padding: 66px 0 0;
   }
 
   .collect-points__inner {
-    width: min(calc(100% - 40px), 528px);
+    width: min(calc(100% - 32px), 408px);
   }
 
   .collect-points__background-logo {
@@ -167,29 +167,59 @@
   }
 
   .collect-points__header {
-    height: auto;
-    gap: 14px;
+    min-height: 164px;
+    gap: 20px;
   }
 
   .collect-points__title {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 42px;
   }
 
   .collect-points__lead {
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .collect-points__grid {
-    width: min(100%, 305px);
-    margin: 38px auto 0;
+    width: min(100%, 401px);
+    margin: 30px auto 0;
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 23px;
+  }
+
+  .collect-points-card {
+    gap: 15px;
+  }
+
+  .collect-points-card__media {
+    height: auto;
+    aspect-ratio: 401 / 518;
+  }
+
+  .collect-points-card__image--cashback {
+    top: -1.58%;
+    left: 17.05%;
+    width: 60.98%;
+    height: 94.67%;
+  }
+
+  .collect-points-card__image--fuels {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .collect-points-card__image--vouchers {
+    top: -2.48%;
+    left: -54.69%;
+    width: 239.13%;
+    height: 104.82%;
   }
 
   .collect-points-card__title {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }

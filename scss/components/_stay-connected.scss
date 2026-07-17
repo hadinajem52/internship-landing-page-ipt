@@ -104,20 +104,28 @@
 
 @media (width <= 560px) {
   .stay-connected {
-    padding-block: 76px 96px;
+    overflow: hidden;
+    padding-block: 101px 100px;
   }
 
   .stay-connected__inner {
-    width: min(calc(100% - 40px), 360px);
+    width: min(calc(100% - 32px), 408px);
   }
 
   .stay-connected__title {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 52px;
   }
 
   .stay-connected__gallery {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    width: max-content;
+    margin-top: 32px;
+    gap: 15px;
+  }
+
+  .stay-connected-card {
+    width: 250px;
+    flex: 0 0 250px;
   }
 }

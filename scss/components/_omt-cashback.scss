@@ -159,13 +159,18 @@
 
 @media (width <= 700px) {
   .omt-cashback__inner {
-    width: min(calc(100% - 40px), 528px);
-    padding-block: 72px 96px;
+    width: min(calc(100% - 38px), 402px);
+    gap: 30px;
+    padding-block: 0;
   }
 
   .omt-cashback__title {
     font-size: 30px;
     line-height: 38px;
+  }
+
+  .omt-cashback__copy {
+    min-height: 281px;
   }
 
   .omt-cashback__lead {
@@ -181,9 +186,9 @@
 
   .omt-wallet {
     display: flex;
-    height: auto;
-    min-height: 232px;
-    padding: 30px 24px 24px;
+    height: 196px;
+    min-height: 0;
+    padding: 30px 17px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -210,21 +215,24 @@
   }
 
   .omt-wallet__button {
-    margin-top: 36px;
+    margin-top: 18px;
   }
 
   .omt-wallet__logo {
     position: absolute;
-    right: 24px;
-    bottom: 24px;
+    right: 17px;
+    bottom: 30px;
   }
 }
 
 @media (width <= 430px) {
+  .omt-wallet {
+    height: auto;
+    min-height: 232px;
+  }
+
   .omt-wallet__logo {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 24px;
+    right: 17px;
+    bottom: 24px;
   }
 }

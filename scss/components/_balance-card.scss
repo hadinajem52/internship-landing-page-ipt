@@ -122,6 +122,9 @@
 
 @media (width <= 700px) {
   .balance-card {
-    display: none;
+    top: 987px;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
   }
 }

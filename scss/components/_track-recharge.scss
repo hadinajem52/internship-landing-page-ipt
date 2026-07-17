@@ -160,25 +160,38 @@
 
 @media (width <= 560px) {
   .track-recharge {
-    padding: 80px 20px 100px;
+    padding: 226px 20px 232px;
+    align-items: flex-start;
+  }
+
+  .track-recharge__scene {
+    width: min(100%, 400px);
+    align-items: stretch;
   }
 
   .track-recharge__phones {
-    width: min(112%, 390px);
+    width: min(84.375%, 337.5px);
+    margin: 30px auto 0;
+    aspect-ratio: 337.5 / 383.8;
   }
 
   .track-recharge__copy {
-    margin-top: 52px;
+    order: -1;
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
   }
 
   .track-recharge__title {
-    font-size: clamp(27px, 8vw, 34px);
+    align-items: flex-start;
+    font-size: clamp(32px, 8.8vw, 39px);
+    line-height: 1.02;
   }
 
   .track-recharge__description {
-    margin-top: 30px;
-    font-size: 15px;
-    line-height: 22px;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 

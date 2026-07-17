@@ -135,21 +135,21 @@
 
 @media (width <= 650px) {
   .ipt-rewards {
-    padding-top: 72px;
+    padding-top: 0;
   }
 
   .ipt-rewards__inner {
-    width: min(calc(100% - 40px), 528px);
+    width: min(calc(100% - 32px), 408px);
   }
 
   .ipt-rewards__section-title {
     margin-bottom: 40px;
-    font-size: 29px;
-    line-height: 38px;
+    font-size: 32px;
+    line-height: 41px;
   }
 
   .ipt-rewards__content {
-    gap: 38px;
+    gap: 30px;
   }
 
   .ipt-rewards__intro {
@@ -157,27 +157,36 @@
   }
 
   .ipt-rewards__title {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 42px;
   }
 
   .ipt-rewards__lead {
-    margin-top: 14px;
-    font-size: 17px;
-    line-height: 23px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .ipt-rewards__grid {
-    width: min(100%, 305px);
+    width: min(100%, 401px);
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 30px;
+  }
+
+  .ipt-reward-card {
+    gap: 21px;
+  }
+
+  .ipt-reward-card__image {
+    aspect-ratio: 401 / 518;
   }
 
   .ipt-reward-card__title {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .ipt-rewards + .omt-cashback {
-    padding-top: 96px;
+    padding-top: 66px;
   }
 }

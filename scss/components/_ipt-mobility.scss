@@ -103,21 +103,40 @@
 
 @media (width <= 650px) {
   .ipt-mobility {
-    padding: 76px 0;
+    padding: 0;
   }
 
   .ipt-mobility__inner {
-    width: min(calc(100% - 40px), 528px);
-    gap: 32px;
+    width: min(calc(100% - 38px), 402px);
+    gap: 50px;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .ipt-mobility__media {
+    width: 100%;
+  }
+
+  .ipt-mobility__copy {
+    order: -1;
+    width: 100%;
+    align-items: flex-start;
+    gap: 30px;
   }
 
   .ipt-mobility__title {
-    font-size: 30px;
-    line-height: 38px;
+    display: block;
+    align-items: flex-start;
+    font-size: clamp(32px, 8.8vw, 40px);
+    line-height: 45px;
+  }
+
+  .ipt-mobility__title span {
+    display: inline;
   }
 
   .ipt-mobility__description {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

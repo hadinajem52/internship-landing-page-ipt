@@ -170,35 +170,65 @@
 
 @media (width <= 560px) {
   .steps {
-    padding: 76px 0 100px;
+    padding: 0 0 102px;
+  }
+
+  .steps__inner {
+    width: min(calc(100% - 44px), 396px);
+    gap: 30px;
   }
 
   .steps__title {
-    font-size: clamp(27px, 8vw, 34px);
+    font-size: clamp(31px, 8.2vw, 36px);
+    line-height: 45px;
+  }
+
+  .steps__grid {
+    gap: 24.75px;
   }
 
   .steps__card {
-    display: flex;
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 28px 20px;
+    display: block;
+    width: 100%;
+    height: 321px;
+    padding: 0;
   }
 
   .steps__number {
-    position: static;
-    height: 120px;
-    margin-bottom: -8px;
-    transform: none;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 327px;
+    margin: 0;
+    transform: translateY(-50%);
   }
 
   .steps__content {
-    position: static;
-    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 28.33%;
+    width: 64.44%;
   }
 
   .steps__heading {
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .steps__card--scan .steps__number {
+    height: 277px;
+  }
+
+  .steps__card--scan .steps__content {
+    top: 93px;
+  }
+
+  .steps__card--pay .steps__number {
+    height: 331px;
+  }
+
+  .steps__card--pay .steps__content {
+    top: 18px;
+    width: 66.67%;
   }
 }

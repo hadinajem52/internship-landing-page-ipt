@@ -22,7 +22,10 @@
 
 @media (width <= 700px) {
   .visits-card {
-    display: none;
+    top: 1555px;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
   }
 }
 

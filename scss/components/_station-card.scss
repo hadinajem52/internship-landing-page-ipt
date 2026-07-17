@@ -82,6 +82,9 @@
 
 @media (width <= 700px) {
   .station-card {
-    display: none;
+    top: 2108px;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
   }
 }

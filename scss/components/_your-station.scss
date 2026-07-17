@@ -98,12 +98,12 @@
 
 @media (width <= 650px) {
   .your-station {
-    padding: 48px 0 28px;
+    padding: 0;
   }
 
   .your-station__inner {
-    width: min(calc(100% - 40px), 528px);
-    padding: 28px 24px;
+    width: min(calc(100% - 40px), 400px);
+    padding: 48px 24px;
   }
 
   .your-station__title {
@@ -115,7 +115,7 @@
   .your-station__contacts {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 28px;
   }
 
   .your-station-contact + .your-station-contact {
