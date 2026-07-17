@@ -3,6 +3,11 @@
   background: #f2f9ff;
 }
 
+.get-started-transition {
+  height: 216px;
+  background: linear-gradient(to bottom, #f2f9ff 0%, #fff 100%);
+}
+
 .get-started__inner {
   width: min(calc(100% - 48px), 1309px);
   margin-inline: auto;
