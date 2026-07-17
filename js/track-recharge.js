@@ -34,16 +34,21 @@ export function initTrackRecharge() {
     }, CAROUSEL_DELAY);
   };
 
+  const setExpanded = (nextExpanded) => {
+    if (isExpanded === nextExpanded) return;
+
+    isExpanded = nextExpanded;
+    section.classList.toggle("is-expanded", isExpanded);
+
+    if (isExpanded) startCarousel();
+    else stopCarousel();
+  };
+
   const centerObserver = new IntersectionObserver(
     ([entry]) => {
-      if (!entry.isIntersecting || isExpanded) return;
-      isExpanded = true;
-      isVisible = true;
-      section.classList.add("is-expanded");
-      centerObserver.disconnect();
-      startCarousel();
+      setExpanded(entry.isIntersecting);
     },
-    { rootMargin: "-47.5% 0px -47.5% 0px" },
+    { rootMargin: "-25% 0px -25% 0px" },
   );
 
   const visibilityObserver = new IntersectionObserver(

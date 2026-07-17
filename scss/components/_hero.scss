@@ -1,11 +1,19 @@
 $design-width: 1512px;
 
+main {
+  --hero-base-height: 2343px;
+  --hero-fade-height: 216px;
+  --hero-hidden-runway: 216px;
+  --hero-sticky-overrun: calc(50vh + var(--hero-hidden-runway));
+}
+
 .hero {
   --hero-visual-width: min(68.65vw, 1038px);
   --hero-phone-center-y: min(22.87vw, 345.84px);
 
   position: relative;
-  min-height: 2343px;
+  z-index: 0;
+  min-height: calc(var(--hero-base-height) + var(--hero-sticky-overrun));
   overflow: hidden;
   overflow: clip;
   background:
@@ -142,17 +150,27 @@ $design-width: 1512px;
   right: 0;
   bottom: 0;
   left: 0;
-  height: min(216px, 9.22%);
-  background: linear-gradient(to bottom, rgb(242 249 255 / 0%), #f2f9ff);
+  height: calc(var(--hero-fade-height) + var(--hero-sticky-overrun));
+  background: linear-gradient(
+    to bottom,
+    rgb(242 249 255 / 0%) 0,
+    #f2f9ff var(--hero-fade-height),
+    #f2f9ff 100%
+  );
   pointer-events: none;
 }
 
 @media (width <= 1100px) {
+  main {
+    --hero-base-height: 1900px;
+    --hero-fade-height: 180px;
+    --hero-hidden-runway: 180px;
+  }
+
   .hero {
     --hero-visual-width: max(760px, 68.65vw);
     --hero-phone-center-y: max(253.22px, 22.87vw);
 
-    min-height: 1900px;
   }
 
   .hero__brand {
@@ -167,8 +185,13 @@ $design-width: 1512px;
 }
 
 @media (width <= 700px) {
+  main {
+    --hero-base-height: 1210px;
+    --hero-fade-height: 120px;
+    --hero-hidden-runway: 120px;
+  }
+
   .hero {
-    min-height: 1210px;
     background-size: auto 850px;
   }
 

@@ -1,11 +1,12 @@
 .track-recharge {
-  min-height: max(900px, 120vh);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
   background: #f2f9ff;
 }
 
 .track-recharge__scene {
-  position: sticky;
-  top: calc(50vh - min(16.93vw, 256px));
+  position: relative;
   width: min(75.26vw, 1138px);
   aspect-ratio: 1138 / 512;
   margin-left: min(19.38vw, 293px);
@@ -39,10 +40,6 @@
   width: 44.44%;
   height: auto;
   transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.track-recharge:not(.is-expanded) .track-recharge__side-phone {
-  will-change: transform;
 }
 
 .track-recharge__side-phone--left {

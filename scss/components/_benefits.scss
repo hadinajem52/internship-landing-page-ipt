@@ -1,6 +1,9 @@
 .benefits {
+  position: relative;
+  z-index: 1;
   min-height: 1211px;
-  padding-top: 157px;
+  margin-top: calc(-1 * var(--hero-sticky-overrun));
+  padding-top: 162px;
   background: #f2f9ff;
 }
 
