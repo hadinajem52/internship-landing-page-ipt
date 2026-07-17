@@ -1,0 +1,195 @@
+.collect-points {
+  position: relative;
+  padding-block: 150px;
+  background: #f2f9ff;
+}
+
+.collect-points__background-logo {
+  position: absolute;
+  z-index: 0;
+  top: -60px;
+  right: 0;
+  width: 304px;
+  height: 954px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.collect-points__inner {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 48px), 1312px);
+  margin-inline: auto;
+}
+
+.collect-points__content {
+  width: 977.666px;
+  max-width: 100%;
+}
+
+.collect-points__header {
+  display: flex;
+  height: 86px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-family: "Galaxie Polaris";
+}
+
+.collect-points__title,
+.collect-points__lead,
+.collect-points-card__title {
+  margin: 0;
+}
+
+.collect-points__title {
+  color: #0f4087;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+.collect-points__title strong {
+  color: #feaf00;
+  font: inherit;
+}
+
+.collect-points__lead {
+  color: #00427a;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.collect-points__grid {
+  display: grid;
+  margin-top: 44px;
+  grid-template-columns: 305px 305.333px 305.333px;
+  gap: 31px;
+}
+
+.collect-points-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+}
+
+.collect-points-card__media {
+  position: relative;
+  width: 100%;
+  height: 394px;
+  overflow: hidden;
+  border: 0.871px solid #e0e0e0;
+  background: #fff;
+}
+
+.collect-points-card__media--cashback,
+.collect-points-card__media--vouchers {
+  border-radius: 20px;
+}
+
+.collect-points-card__media--cashback {
+  background: #ffc600;
+}
+
+.collect-points-card__media--fuels {
+  border-radius: 13.063px;
+}
+
+.collect-points-card__image {
+  position: absolute;
+  max-width: none;
+}
+
+.collect-points-card__image--cashback {
+  top: 31px;
+  left: 72px;
+  width: 163px;
+  height: 335px;
+}
+
+.collect-points-card__image--fuels {
+  top: -7px;
+  left: -0.333px;
+  width: 305px;
+  height: 401px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.collect-points-card__image--vouchers {
+  top: -19px;
+  left: -197.333px;
+  width: 730.156px;
+  height: 413px;
+}
+
+.collect-points-card__title {
+  width: 100%;
+  color: #00427a;
+  font-family: "Galaxie Polaris";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 27.361px;
+}
+
+@media (width <= 1050px) {
+  .collect-points {
+    padding-block: 120px;
+  }
+
+  .collect-points__content {
+    width: 100%;
+  }
+
+  .collect-points__grid {
+    grid-template-columns: repeat(2, minmax(0, 305px));
+    justify-content: center;
+    gap: 48px 31px;
+  }
+}
+
+@media (width <= 680px) {
+  .collect-points {
+    padding-block: 96px;
+  }
+
+  .collect-points__inner {
+    width: min(calc(100% - 40px), 528px);
+  }
+
+  .collect-points__background-logo {
+    top: -40px;
+    width: 220px;
+    height: auto;
+  }
+
+  .collect-points__header {
+    height: auto;
+    gap: 14px;
+  }
+
+  .collect-points__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .collect-points__lead {
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .collect-points__grid {
+    width: min(100%, 305px);
+    margin: 38px auto 0;
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .collect-points-card__title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
