@@ -1,0 +1,129 @@
+.your-station {
+  padding: 64px 0 40px;
+  background: #fff;
+}
+
+.your-station__inner {
+  display: flex;
+  width: min(calc(100% - 48px), 1310px);
+  margin-inline: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 48px;
+  border-radius: 10px;
+  background: #ffc600;
+}
+
+.your-station__title {
+  max-width: 430px;
+  margin: 0;
+  color: #00427a;
+  font-family: "Sommet Rounded", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.your-station__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.your-station-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.your-station-contact + .your-station-contact {
+  padding-left: 20px;
+  border-left: 1px solid rgb(0 66 122 / 35%);
+}
+
+.your-station-contact__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.your-station-contact__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.your-station-contact__label {
+  color: #00427a;
+  font-family: "Sommet Rounded", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.your-station-contact__value {
+  color: #00427a;
+  font-family: "Galaxie Polaris", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+@media (width <= 1100px) {
+  .your-station {
+    padding: 56px 0 32px;
+  }
+
+  .your-station__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+  }
+
+  .your-station__contacts {
+    gap: 24px 32px;
+  }
+}
+
+@media (width <= 650px) {
+  .your-station {
+    padding: 48px 0 28px;
+  }
+
+  .your-station__inner {
+    width: min(calc(100% - 40px), 528px);
+    padding: 28px 24px;
+  }
+
+  .your-station__title {
+    max-width: none;
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .your-station__contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .your-station-contact + .your-station-contact {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .your-station-contact__value {
+    white-space: normal;
+  }
+}
