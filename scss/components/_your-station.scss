@@ -107,19 +107,28 @@
   }
 
   .your-station__title {
+    width: 100%;
     max-width: none;
+    text-align: center;
     font-size: 26px;
     line-height: 34px;
   }
 
   .your-station__contacts {
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 28px;
   }
 
+  .your-station-contact {
+    width: 100%;
+  }
+
   .your-station-contact + .your-station-contact {
+    padding-top: 28px;
     padding-left: 0;
+    border-top: 1px solid rgb(0 66 122 / 35%);
     border-left: 0;
   }
 

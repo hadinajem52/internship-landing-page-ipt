@@ -47,6 +47,10 @@ main {
   height: 100%;
 }
 
+.hero__cta {
+  display: none;
+}
+
 .hero__title {
   position: absolute;
   z-index: 2;
@@ -205,6 +209,28 @@ main {
     left: 24px;
     width: 142px;
     height: auto;
+  }
+
+  .hero__cta {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 5px 20px;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background: #ffc600;
+    color: #00427a;
+    font-family: "Sommet Rounded", sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .hero__title {

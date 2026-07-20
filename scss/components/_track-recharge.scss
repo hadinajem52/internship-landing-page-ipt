@@ -175,6 +175,17 @@
     aspect-ratio: 337.5 / 383.8;
   }
 
+  .track-recharge__side-phone {
+    display: none;
+  }
+
+  .track-recharge__middle-phone {
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 337.5 / 383.8;
+  }
+
   .track-recharge__copy {
     order: -1;
     width: 100%;

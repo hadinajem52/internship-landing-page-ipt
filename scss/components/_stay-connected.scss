@@ -20,6 +20,10 @@
   text-transform: uppercase;
 }
 
+.stay-connected__social {
+  display: none;
+}
+
 .stay-connected__gallery {
   display: grid;
   margin: 32px 0 0;
@@ -115,6 +119,21 @@
   .stay-connected__title {
     font-size: 35px;
     line-height: 52px;
+  }
+
+  .stay-connected__social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .stay-connected__social img {
+    display: block;
+    width: 38px;
+    height: 38px;
   }
 
   .stay-connected__gallery {
